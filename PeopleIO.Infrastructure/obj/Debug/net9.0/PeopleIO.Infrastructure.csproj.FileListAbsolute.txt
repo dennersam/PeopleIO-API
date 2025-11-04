@@ -1,0 +1,11 @@
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\bin\Debug\net9.0\PeopleIO.Infrastructure.deps.json
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\bin\Debug\net9.0\PeopleIO.Infrastructure.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\bin\Debug\net9.0\PeopleIO.Infrastructure.pdb
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.AssemblyInfo.cs
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\refint\PeopleIO.Infrastructure.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.pdb
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\ref\PeopleIO.Infrastructure.dll

@@ -1,0 +1,11 @@
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\bin\Debug\net9.0\PeopleIO.Domain.deps.json
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\bin\Debug\net9.0\PeopleIO.Domain.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\bin\Debug\net9.0\PeopleIO.Domain.pdb
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.AssemblyInfoInputs.cache
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.AssemblyInfo.cs
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.csproj.CoreCompileInputs.cache
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\refint\PeopleIO.Domain.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.pdb
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\ref\PeopleIO.Domain.dll
