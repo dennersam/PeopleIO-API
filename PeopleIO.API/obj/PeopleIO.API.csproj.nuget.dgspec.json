@@ -26,6 +26,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj": {
+                "projectPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj"
+              },
               "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Communication\\PeopleIO.Communication.csproj": {
                 "projectPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Communication\\PeopleIO.Communication.csproj"
               },
@@ -54,6 +57,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Azure.Extensions.AspNetCore.Configuration.Secrets": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.10, )"
@@ -78,6 +89,79 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj",
+        "projectName": "PeopleIO.Application",
+        "projectPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj",
+        "packagesPath": "C:\\Users\\denne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\denne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.26.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -225,7 +309,14 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj": {
+                "projectPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Application\\PeopleIO.Application.csproj"
+              },
+              "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Domain\\PeopleIO.Domain.csproj": {
+                "projectPath": "C:\\Users\\denne\\RiderProjects\\PeopleIO\\PeopleIO.Domain\\PeopleIO.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -247,6 +338,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [

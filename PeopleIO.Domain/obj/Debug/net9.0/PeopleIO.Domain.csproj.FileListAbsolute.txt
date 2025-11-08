@@ -9,3 +9,4 @@ C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\refint\PeopleIO.Domain.dll
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.pdb
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\ref\PeopleIO.Domain.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Domain\obj\Debug\net9.0\PeopleIO.Domain.sourcelink.json

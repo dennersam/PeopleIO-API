@@ -1,7 +1,15 @@
+using Azure.Identity;
 using PeapleIO.API.Endpoints;
+using PeopleIO.Infrastructure;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.AddAzureKeyVault(
+    new Uri(builder.Configuration["KeyVault:Url"]!),
+    new DefaultAzureCredential());
+
+builder.Services.AddInfraestructure(builder.Configuration);
 
 builder.Services.AddOpenApi();
 

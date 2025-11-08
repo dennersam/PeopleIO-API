@@ -9,3 +9,5 @@ C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\P
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\refint\PeopleIO.Infrastructure.dll
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.pdb
 C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\ref\PeopleIO.Infrastructure.dll
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\denne\RiderProjects\PeopleIO\PeopleIO.Infrastructure\obj\Debug\net9.0\PeopleIO.Infrastructure.sourcelink.json

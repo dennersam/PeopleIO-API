@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeopleIO.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18e21c7a16f650a49cc0eea3ddcb7d1384f7742e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeopleIO.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeopleIO.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
