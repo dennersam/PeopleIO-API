@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>PeapleIO.API</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.4.0" />
+        <PackageReference Include="Azure.Identity" Version="1.17.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10"/>
+        <PackageReference Include="Scalar.AspNetCore" Version="2.9.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PeopleIO.Application\PeopleIO.Application.csproj" />
+      <ProjectReference Include="..\PeopleIO.Communication\PeopleIO.Communication.csproj" />
+      <ProjectReference Include="..\PeopleIO.Domain\PeopleIO.Domain.csproj" />
+      <ProjectReference Include="..\PeopleIO.Infrastructure\PeopleIO.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
