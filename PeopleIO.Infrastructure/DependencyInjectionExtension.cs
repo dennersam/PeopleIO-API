@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PeopleIO.Domain.Contract;
 using PeopleIO.Infrastructure.Context;
+using PeopleIO.Infrastructure.Repository;
 
 namespace PeopleIO.Infrastructure;
 
@@ -15,12 +17,13 @@ public static class DependencyInjectionExtension
 
     private static void AddRepository(this IServiceCollection services)
     {
-        //services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
+        services.AddScoped<IColaboradorRepository, ColaboradorRepository>();
         
     }
     private static void AddDatabase(IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration["PEOPLEIO-CONN-STRING-PGSQL"];
-        services.AddDbContext<PeopleIOContext>(opt => opt.UseNpgsql(connectionString));
+        Console.WriteLine("Database connection string: " + connectionString);
+        services.AddDbContext<PeopleIoContext>(opt => opt.UseNpgsql(connectionString));
     }
 }

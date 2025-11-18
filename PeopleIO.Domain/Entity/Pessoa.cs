@@ -1,4 +1,5 @@
 ﻿using PeopleIO.Domain.Entity;
+using PeopleIO.Domain.Enum;
 
 public abstract class Pessoa
 {
@@ -26,15 +27,14 @@ public abstract class Pessoa
     public string TituloZona { get; set; } = default!;
     public string TituloSecao { get; set; } = default!;
 
-    public string CNHNumero { get; set; } = default!;
-    public string CNHUF { get; set; } = default!;
-    public DateTime CNHDataVencimento { get; set; }
-    public string CNHOrgaoEmissor { get; set; } = default!;
-    public string CNHTipo { get; set; } = default!;
-
-    // Dados demográficos
+    public string? CNHNumero { get; set; } 
+    public string? CNHUF { get; set; }
+    public DateTime? CNHDataVencimento { get; set; }
+    public string? CNHOrgaoEmissor { get; set; } 
+    public string? CNHTipo { get; set; }
+    
     public string CorRaca { get; set; } = default!;
-    public string Sexo { get; set; } = default!;
+    public Sexo Sexo { get; set; } = default!;
     public string Escolaridade { get; set; } = default!;
     public string EstadoCivil { get; set; } = default!;
     public string Naturalidade { get; set; } = default!;

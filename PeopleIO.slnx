@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="PeopleIO.API/PeopleIO.API.csproj" />
+  <Project Path="PeopleIO.Application/PeopleIO.Application.csproj" />
+  <Project Path="PeopleIO.Communication/PeopleIO.Communication.csproj" />
+  <Project Path="PeopleIO.Domain/PeopleIO.Domain.csproj" />
+  <Project Path="PeopleIO.Exceptions/PeopleIO.Exceptions.csproj" />
+  <Project Path="PeopleIO.Infrastructure/PeopleIO.Infrastructure.csproj" />
+</Solution>

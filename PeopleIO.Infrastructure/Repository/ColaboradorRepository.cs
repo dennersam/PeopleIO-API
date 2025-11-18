@@ -5,42 +5,45 @@ using PeopleIO.Infrastructure.Context;
 
 namespace PeopleIO.Infrastructure.Repository;
 
-public class ColaboradorRepository(PeopleIOContext ctx) : IColaboradorRepository
+public class ColaboradorRepository : IColaboradorRepository
 {
-    private readonly PeopleIOContext _ctx;
+    private readonly PeopleIoContext _ctx;
 
-    public async Task Register(Colaborador colaborador)
+    public ColaboradorRepository(PeopleIoContext ctx)
     {
-        await _ctx.Colaboradores.AddAsync(colaborador);
-        await _ctx.SaveChangesAsync();
+        _ctx = ctx;
     }
 
-    public async Task<Colaborador?> GetById(Guid id)
+    public int Register(Colaborador colaborador)
     {
-        return await _ctx.Colaboradores
-            .Include(c => c.Endereco)
+        _ctx.Colaborador.Add(colaborador);
+        return _ctx.SaveChanges();
+    }
+
+    public Task<Colaborador?> GetById(Guid id)
+    {
+        return _ctx.Colaborador
             .FirstOrDefaultAsync(c => c.Id == id);
     }
 
-    public async Task<IEnumerable<Colaborador>> GetAll()
+    public IEnumerable<Colaborador> GetAll()
     {
-        return await _ctx.Colaboradores
-            .Include(c => c.Endereco)
-            .ToListAsync();
+        return _ctx.Colaborador
+            .ToList();
     }
 
     public async Task Update(Colaborador colaborador)
     {
-        _ctx.Colaboradores.Update(colaborador);
+        _ctx.Colaborador.Update(colaborador);
         await _ctx.SaveChangesAsync();
     }
 
     public async Task Delete(Guid id)
     {
-        var colaborador = await _ctx.Colaboradores.FindAsync(id);
+        var colaborador = await _ctx.Colaborador.FindAsync(id);
         if (colaborador is not null)
         {
-            _ctx.Colaboradores.Remove(colaborador);
+            _ctx.Colaborador.Remove(colaborador);
             await _ctx.SaveChangesAsync();
         }
     }

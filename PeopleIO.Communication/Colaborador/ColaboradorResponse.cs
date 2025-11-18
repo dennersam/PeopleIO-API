@@ -7,4 +7,7 @@ public record ColaboradorResponse(
     string Cargo,
     string Departamento,
     bool Ativo
-);
+)
+{
+    
+}

@@ -1,15 +1,15 @@
 ﻿namespace PeopleIO.Communication;
 
-public record CreateColaboradorRequest(
+public record RequestRegisterColaborador(
     string Nome,
     string CPF,
     DateTime DataNascimento,
     string Email,
-    string Telefone,
+    string? Telefone,
     EnderecoRequest Endereco,
-    string Cargo,
-    string Departamento,
-    DateTime DataAdmissao,
+    string? Cargo,
+    string? Departamento,
+    DateTime? DataAdmissao,
     string IdentidadeNumero,
     string IdentidadeOrgaoEmissor,
     string IdentidadeUF,
@@ -33,5 +33,9 @@ public record CreateColaboradorRequest(
     string Escolaridade,
     string EstadoCivil,
     string Naturalidade,
-    string Nacionalidade
+    string Nacionalidade, 
+    DocumentoDTO? ArquivoRG,
+    DocumentoDTO? ArquivoCNH,
+    DocumentoDTO? ArquivoCPF,
+    DocumentoDTO? ArquivoComprovanteResidencia 
 );
