@@ -13,7 +13,14 @@ public class GetColaboradorByIdService : IGetColaboradorByIdService
 
     public async Task<Domain.Entity.Colaborador> Execute(Guid id)
     {
-        var colaborador = await _repository.GetById(id);
+        if (id == Guid.Empty)
+            throw new ArgumentException("ID inválido.");
+
+        var colaborador = await _repository.GetByIdAsync(id);
+        if (colaborador is null)
+            throw new KeyNotFoundException($"Colaborador com ID {id} não encontrado.");
+
         return colaborador;
+
     }
 }

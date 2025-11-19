@@ -1,4 +1,5 @@
-﻿using PeopleIO.Application.Services.Colaborador.GetAll;
+﻿using PeopleIO.Application.Services.Colaborador.Delete;
+using PeopleIO.Application.Services.Colaborador.GetAll;
 using PeopleIO.Application.Services.Colaborador.GetById;
 using PeopleIO.Application.Services.Colaborador.Register;
 using PeopleIO.Communication;
@@ -22,10 +23,24 @@ public static class ColaboradorEndpoints
                 : Results.Ok(colaborador);
         });
         group.MapPost("", (RequestRegisterColaborador request, IRegisterColaboradorService service) =>
+        {
+            var result = service.Execute(request);
+            return Results.Created($"/colaboradores/{result.Value.Id}", result);
+        })
+        .WithName("CreateColaborador");
+        group.MapDelete("/{id:guid}", async (Guid id, IRemoveColaboradorService service) =>
+        {
+            try
             {
-                var result = service.Execute(request);
-                return Results.Created($"/colaboradores/{result.Value.Id}", result);
-            })
-            .WithName("CreateColaborador");
+                var success = await service.Execute(id);
+                return success ? Results.NoContent() : Results.NotFound();
+            }
+            catch (Exception ex)
+            {
+                return Results.Problem("Erro ao remover colaborador: " + ex.Message);
+            }
+        })
+        .WithName("DeleteColaborador");
+
     }
 }

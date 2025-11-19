@@ -5,9 +5,9 @@ namespace PeopleIO.Domain.Contract;
 public interface IColaboradorRepository
 {
     int Register(Colaborador colaborador);
-    Task<Colaborador?> GetById(Guid id);
+    Task<Colaborador?> GetByIdAsync(Guid id);
     IEnumerable<Colaborador> GetAll();
     Task Update(Colaborador colaborador);
-    Task Delete(Guid id);
+    Task DeleteAsync(Guid id);
 
 }

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using PeopleIO.Application.Mappers;
 using PeopleIO.Application.Services;
+using PeopleIO.Application.Services.Colaborador.Delete;
 using PeopleIO.Application.Services.Colaborador.GetAll;
 using PeopleIO.Application.Services.Colaborador.GetById;
 using PeopleIO.Application.Services.Colaborador.Register;
@@ -22,6 +23,7 @@ public static class DependencyInjectionExtension
         services.AddScoped<IRegisterColaboradorService, RegisterColaboradorService>();
         services.AddScoped<IGetAllColaboradoresService, GetAllColaboradoresService>();
         services.AddScoped<IGetColaboradorByIdService, GetColaboradorByIdService>();
+        services.AddScoped<IRemoveColaboradorService, RemoveColaboradorService>();
 
     }
 }

@@ -20,32 +20,30 @@ public class ColaboradorRepository : IColaboradorRepository
         return _ctx.SaveChanges();
     }
 
-    public Task<Colaborador?> GetById(Guid id)
-    {
-        return _ctx.Colaborador
-            .FirstOrDefaultAsync(c => c.Id == id);
-    }
+    public Task<Colaborador?> GetByIdAsync(Guid id) =>
+        _ctx.Colaborador.FirstOrDefaultAsync(c => c.Id == id);
+    
 
-    public IEnumerable<Colaborador> GetAll()
-    {
-        return _ctx.Colaborador
+
+    public IEnumerable<Colaborador> GetAll() =>
+        _ctx.Colaborador
             .ToList();
-    }
-
+    
     public async Task Update(Colaborador colaborador)
     {
         _ctx.Colaborador.Update(colaborador);
         await _ctx.SaveChangesAsync();
     }
 
-    public async Task Delete(Guid id)
+    public async Task DeleteAsync(Guid id)
     {
         var colaborador = await _ctx.Colaborador.FindAsync(id);
-        if (colaborador is not null)
+        if (colaborador != null)
         {
             _ctx.Colaborador.Remove(colaborador);
             await _ctx.SaveChangesAsync();
         }
     }
+
 
 }
