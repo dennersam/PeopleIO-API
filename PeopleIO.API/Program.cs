@@ -6,6 +6,17 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var  origins = "allowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: origins,
+        policy  =>
+        {
+            policy.WithOrigins("http://localhost");
+        });
+});
+
 builder.Configuration.AddAzureKeyVault(
     new Uri(builder.Configuration["KeyVault:Url"]!),
     new DefaultAzureCredential());
@@ -24,6 +35,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(origins);
 app.MapColaboradorEndpoints();
 
 app.Run();

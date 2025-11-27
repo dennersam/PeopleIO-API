@@ -10,5 +10,7 @@ public enum Sexo
     [Display(Name = "Feminino")]
     Feminino,
     [Display(Name = "Prefiro não informar")]
-    PrefiroNaoInformar
+    PrefiroNaoInformar,
+    [Display(Name = "Outro")]
+    Outro
 }

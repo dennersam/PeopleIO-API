@@ -1,4 +1,5 @@
-﻿using PeopleIO.Domain.Entity;
+﻿using System;
+using PeopleIO.Domain.Entity;
 using PeopleIO.Domain.Enum;
 
 public abstract class Pessoa
