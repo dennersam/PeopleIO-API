@@ -10,11 +10,14 @@ var  origins = "allowSpecificOrigins";
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: origins,
-        policy  =>
-        {
-            policy.WithOrigins("http://localhost:5173/");
-        });
+    options.AddPolicy(origins, policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
 });
 
 builder.Configuration.AddAzureKeyVault(
