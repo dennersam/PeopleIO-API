@@ -24,10 +24,7 @@ public class RegisterColaboradorService : IRegisterColaboradorService
         var response = new ColaboradorResponse(
             colaborador.Id, 
             colaborador.Nome, 
-            colaborador.Email,
-            colaborador.Cargo,
-            colaborador.Departamento!,
-            colaborador.Ativo);
+            colaborador.Email);
         
         return Result<ColaboradorResponse>.Success(response);
     }
