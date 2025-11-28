@@ -22,6 +22,9 @@ public class PeopleIoContext : DbContext
             entity.Property(c => c.Sexo)
                 .HasConversion<string>();
             
+            entity.Property(c => c.CorRaca)
+                .HasConversion<string>();
+            
             entity.OwnsOne(c => c.Endereco, endereco =>
             {
                 endereco.Property(e => e.Rua).HasColumnName("Rua");

@@ -34,7 +34,7 @@ public abstract class Pessoa
     public string? CNHOrgaoEmissor { get; set; } 
     public string? CNHTipo { get; set; }
     
-    public string CorRaca { get; set; } = default!;
+    public CorRaca CorRaca { get; set; } = default!;
     public Sexo Sexo { get; set; } = default!;
     public string Escolaridade { get; set; } = default!;
     public string EstadoCivil { get; set; } = default!;
