@@ -32,7 +32,7 @@ public class PeopleIoContext : DbContext
                 endereco.Property(e => e.Bairro).HasColumnName("Bairro");
                 endereco.Property(e => e.Cidade).HasColumnName("Cidade");
                 endereco.Property(e => e.Estado).HasColumnName("Estado");
-                endereco.Property(e => e.Cep).HasColumnName("CEP");
+                endereco.Property(e => e.CEP).HasColumnName("CEP");
             });
 
             entity.OwnsOne(c => c.ArquivoRG, doc =>

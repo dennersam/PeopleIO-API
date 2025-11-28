@@ -22,11 +22,10 @@ public abstract class Pessoa
     public DateTime CTPSDataEmissao { get; set; }
     public string CTPSUF { get; set; } = default!;
 
-    public string TituloEleitor { get; set; } = default!;
-    public DateTime TituloDataEmissao { get; set; }
-    public string TituloUF { get; set; } = default!;
-    public string TituloZona { get; set; } = default!;
-    public string TituloSecao { get; set; } = default!;
+    public string? TituloEleitorNumero { get; set; } 
+    public string? TituloUF { get; set; }
+    public string? TituloZona { get; set; } 
+    public string? TituloSecao { get; set; } 
 
     public string? CNHNumero { get; set; } 
     public string? CNHUF { get; set; }

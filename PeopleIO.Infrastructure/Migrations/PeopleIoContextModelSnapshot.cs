@@ -131,28 +131,21 @@ namespace PeopleIO.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("TituloDataEmissao")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("TituloEleitor")
-                        .IsRequired()
+                    b.Property<string>("TituloEleitorNumero")
                         .HasColumnType("text");
 
                     b.Property<string>("TituloSecao")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TituloUF")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TituloZona")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("colaboradores", (string)null);
+                    b.ToTable("colaborador", (string)null);
                 });
 
             modelBuilder.Entity("PeopleIO.Domain.Entity.Colaborador", b =>
@@ -183,7 +176,7 @@ namespace PeopleIO.Infrastructure.Migrations
 
                             b1.HasKey("ColaboradorId");
 
-                            b1.ToTable("colaboradores");
+                            b1.ToTable("colaborador");
 
                             b1.WithOwner()
                                 .HasForeignKey("ColaboradorId");
@@ -215,7 +208,7 @@ namespace PeopleIO.Infrastructure.Migrations
 
                             b1.HasKey("ColaboradorId");
 
-                            b1.ToTable("colaboradores");
+                            b1.ToTable("colaborador");
 
                             b1.WithOwner()
                                 .HasForeignKey("ColaboradorId");
@@ -247,7 +240,7 @@ namespace PeopleIO.Infrastructure.Migrations
 
                             b1.HasKey("ColaboradorId");
 
-                            b1.ToTable("colaboradores");
+                            b1.ToTable("colaborador");
 
                             b1.WithOwner()
                                 .HasForeignKey("ColaboradorId");
@@ -279,7 +272,7 @@ namespace PeopleIO.Infrastructure.Migrations
 
                             b1.HasKey("ColaboradorId");
 
-                            b1.ToTable("colaboradores");
+                            b1.ToTable("colaborador");
 
                             b1.WithOwner()
                                 .HasForeignKey("ColaboradorId");
@@ -295,7 +288,7 @@ namespace PeopleIO.Infrastructure.Migrations
                                 .HasColumnType("text")
                                 .HasColumnName("Bairro");
 
-                            b1.Property<string>("Cep")
+                            b1.Property<string>("CEP")
                                 .IsRequired()
                                 .HasColumnType("text")
                                 .HasColumnName("CEP");
@@ -322,7 +315,7 @@ namespace PeopleIO.Infrastructure.Migrations
 
                             b1.HasKey("ColaboradorId");
 
-                            b1.ToTable("colaboradores");
+                            b1.ToTable("colaborador");
 
                             b1.WithOwner()
                                 .HasForeignKey("ColaboradorId");

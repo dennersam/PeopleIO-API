@@ -7,5 +7,5 @@ public class Endereco
     public string Bairro { get; private set; }
     public string Cidade { get; private set; }
     public string Estado { get; private set; }
-    public string Cep { get; private set; }
+    public string CEP { get; private set; }
 }
