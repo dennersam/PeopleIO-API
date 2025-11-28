@@ -30,7 +30,7 @@ public class RegisterColaboradorValidator : AbstractValidator<RequestRegisterCol
             .NotEmpty().WithMessage("A Cidade é obrigatório.");
         RuleFor(x => x.Endereco.Estado)
             .NotEmpty().WithMessage("Estado é obrigatório.");
-        RuleFor(x => x.Endereco.Cep)
+        RuleFor(x => x.Endereco.CEP)
             .NotEmpty().WithMessage("CEP é obrigatório.")
             .Matches(@"^\d{8}$").WithMessage("CEP deve conter exatamente 8 dígitos numéricos");
         

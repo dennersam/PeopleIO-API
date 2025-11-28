@@ -6,5 +6,5 @@ public record EnderecoRequest(
     string Bairro,
     string Cidade,
     string Estado,
-    string Cep
+    string CEP
 );
