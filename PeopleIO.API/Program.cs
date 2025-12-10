@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(origins, policy =>
     {
         policy
-            .WithOrigins("http://localhost:5173","https://red-flower-08bf62a0f.3.azurestaticapps.net/")
+            .WithOrigins("http://localhost:5173","https://red-flower-08bf62a0f.3.azurestaticapps.net")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
