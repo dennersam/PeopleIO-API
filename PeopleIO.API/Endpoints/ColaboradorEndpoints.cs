@@ -22,10 +22,14 @@ public static class ColaboradorEndpoints
                 ? Results.NotFound()
                 : Results.Ok(colaborador);
         });
-        group.MapPost("", (RequestRegisterColaborador request, IRegisterColaboradorService service) =>
+        group.MapPost("", async (RequestRegisterColaborador request, IRegisterColaboradorService service) =>
         {
-            var result = service.Execute(request);
-            return Results.Created($"/colaboradores/{result.Value.Id}", result);
+            var result = await service.ExecuteAsync(request);
+            if (result.IsSuccess)
+            {
+                return Results.Created($"/api/v1/colaboradores/{result.Value!.Id}", result.Value);
+            }
+            return Results.BadRequest(new { Errors = new[] { result.Error } });
         })
         .WithName("CreateColaborador");
         group.MapDelete("/{id:guid}", async (Guid id, IRemoveColaboradorService service) =>

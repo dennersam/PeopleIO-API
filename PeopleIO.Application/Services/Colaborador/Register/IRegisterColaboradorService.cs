@@ -5,5 +5,5 @@ namespace PeopleIO.Application.Services.Colaborador.Register;
 
 public interface IRegisterColaboradorService
 {
-    Result<ColaboradorResponse> Execute(RequestRegisterColaborador request);
+    Task<Result<ColaboradorResponse>> ExecuteAsync(RequestRegisterColaborador request);
 }

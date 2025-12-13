@@ -14,12 +14,16 @@ public class RegisterColaboradorService : IRegisterColaboradorService
         _colaboradorRepository = colaboradorRepository;
     }
 
-    public Result<ColaboradorResponse> Execute(RequestRegisterColaborador request)
+    public async Task<Result<ColaboradorResponse>> ExecuteAsync(RequestRegisterColaborador request)
     {
         Validate(request);
+        
+        if(await _colaboradorRepository.GetByCPFAsync(request.CPF))
+            return Result<ColaboradorResponse>.Failure("O CPF informado já existe no sistema.");
+        
         var colaborador = request.Adapt<Domain.Entity.Colaborador>();
         
-        _colaboradorRepository.Register(colaborador);
+        await _colaboradorRepository.RegisterAsync(colaborador);
         
         var response = new ColaboradorResponse(
             colaborador.Id, 

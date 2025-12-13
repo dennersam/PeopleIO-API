@@ -14,17 +14,18 @@ public class ColaboradorRepository : IColaboradorRepository
         _ctx = ctx;
     }
 
-    public int Register(Colaborador colaborador)
+    public async Task<int> RegisterAsync(Colaborador colaborador)
     {
-        _ctx.Colaborador.Add(colaborador);
-        return _ctx.SaveChanges();
+        await _ctx.Colaborador.AddAsync(colaborador);
+        return await _ctx.SaveChangesAsync();
     }
 
     public Task<Colaborador?> GetByIdAsync(Guid id) =>
-        _ctx.Colaborador.FirstOrDefaultAsync(c => c.Id == id);
+        _ctx.Colaborador.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);    
     
-
-
+    public Task<bool> GetByCPFAsync(string cpf) =>
+        _ctx.Colaborador.AsNoTracking().AnyAsync(c => c.CPF == cpf);
+    
     public IEnumerable<Colaborador> GetAll() =>
         _ctx.Colaborador
             .ToList();
